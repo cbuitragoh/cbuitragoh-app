@@ -1,3 +1,4 @@
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,16 +6,19 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
+    padding: 20px;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: #fff;
@@ -23,28 +27,128 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
-.cta-btn {
-    padding: 10px 20px;
-    background-color: #f39c12;
-    color: white;
+.social-links a {
+    margin: 0 10px;
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
 }
 
+/* Section Styling */
 section {
-    padding: 50px 0;
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* Justify the paragraph text in the About section */
+#about p {
+    text-align: justify;  /* Justify the text */
+    line-height: 1.6;      /* Optional: Add space between lines for better readability */
+    margin-bottom: 10px;   /* Optional: Add space below the paragraph */
+}
+
+#research p {
+    text-align: justify;  /* Justify the text */
+    line-height: 1.6;      /* Optional: Add space between lines for better readability */
+    margin-bottom: 10px;   /* Optional: Add space below the paragraph */
+    font-style: italic;
+}
+/* Projects */
+
+/* Flexbox for Projects Container */
+.projects-container {
+    display: flex; /* Enables Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    justify-content: space-around; /* Distribute space evenly between items */
+    gap: 20px; /* Add space between project items */
+}
+
+/* Style each project */
+.project {
+    width: 300px; /* Set a fixed width for each project */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for project images */
+.project-image {
+    width: 150px; /* Fixed width for image */
+    height: 150px; /* Fixed height for image */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Add space below the image */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for better look */
+}
+
+/* Title Styling */
+.project h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+/* Style each service */
+.service {
+    width: 300px; /* Set a fixed width for each project */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Footer */
 footer {
     background-color: #333;
-    color: white;
-    padding: 20px;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
+}
+
+/* Responsive Design: Stacking Projects on Smaller Screens */
+@media (max-width: 768px) {
+    .projects-container {
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .project {
+        width: 250px; /* Smaller width for each project on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: 100%; /* Full-width projects on very small screens */
+    }
 }
